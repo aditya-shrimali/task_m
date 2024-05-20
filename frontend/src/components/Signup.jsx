@@ -27,9 +27,8 @@ const Signup = () => {
       console.log("data", data);
       if (response.ok) {
         // Handle successful login, e.g., store the token
-        console.log("Signup successful:", data);
         localStorage.setItem("token", data.token);
-        // Redirect or update the UI as needed
+        // Redirect to dashboard
         navigate("/dashboard");
       } else {
         // Handle errors

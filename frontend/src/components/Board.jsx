@@ -29,7 +29,6 @@ const Board = () => {
       });
   };
 
-  console.log(sidebar);
   useEffect(() => {
     fetch(`https://task-m-api.vercel.app/api/tasks/all?boardId=${id}`, {
       method: "GET",
