@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import logo from "../assets/T.png";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -44,9 +45,7 @@ const Signup = () => {
       <div className="bg-purple-200 h-[100vh]">
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <h1 className="text-4xl font-semibold text-center text-green-800">
-              TM
-            </h1>
+            <img src={logo} alt="logo" className="w-12 h-12 m-auto" />
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
               Register your account
             </h2>
