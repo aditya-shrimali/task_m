@@ -24,11 +24,12 @@ const Appbar = () => {
             <div>
               <button onClick={handleLogin}>login</button>
             </div>
-          ) : (
+          ) : null}
+          {logstatus === "logout" ? (
             <div>
               <button onClick={handleLogout}>logout</button>
             </div>
-          )}
+          ) : null}
         </div>
       </div>
     </div>
