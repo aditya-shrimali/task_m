@@ -17,6 +17,7 @@ const Appbar = () => {
       <div className="bg-purple-200 w-[90%] m-auto flex justify-between border-b-2 border-black pl-12 pr-12 pt-3 pb-2">
         <div>
           <a
+            className="hover:cursor-pointer"
             onClick={() => {
               navigate("/dashboard");
             }}
