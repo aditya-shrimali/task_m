@@ -24,6 +24,9 @@ app.use("/api/boards", boardsRoutes);
 app.use("/api/tasks", tasksRoutes);
 app.use("/api/users", usersRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Task_M");
+});
 // Start server
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
