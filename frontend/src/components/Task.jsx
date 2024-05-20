@@ -4,7 +4,7 @@ import { useState } from "react";
 const Task = ({ title, desc, id, deleteIt, status }) => {
   const handleDelete = () => {
     deleteIt(id);
-    fetch(`http://localhost:3000/api/tasks/${id}`, {
+    fetch(`https://task-m-api.vercel.app/api/tasks/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -20,7 +20,7 @@ const Task = ({ title, desc, id, deleteIt, status }) => {
 
   const handleChange = (e) => {
     setStatus1(e.target.checked ? "success" : "processing");
-    fetch(`http://localhost:3000/api/tasks/${id}`, {
+    fetch(`https://task-m-api.vercel.app/api/tasks/${id}`, {
       method: "PUT",
       body: JSON.stringify({
         title,

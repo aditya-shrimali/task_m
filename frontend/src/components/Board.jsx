@@ -14,7 +14,7 @@ const Board = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/api/tasks/new", {
+    fetch("https://task-m-api.vercel.app/api/tasks/new", {
       method: "POST",
       body: JSON.stringify({ ...newTask, boardId: id }),
       headers: {
@@ -31,7 +31,7 @@ const Board = () => {
 
   console.log(sidebar);
   useEffect(() => {
-    fetch(`http://localhost:3000/api/tasks/all?boardId=${id}`, {
+    fetch(`https://task-m-api.vercel.app/api/tasks/all?boardId=${id}`, {
       method: "GET",
 
       headers: {

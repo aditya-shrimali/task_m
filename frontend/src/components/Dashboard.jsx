@@ -14,7 +14,7 @@ const Dashboard = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/api/boards/new", {
+    fetch("https://task-m-api.vercel.app/api/boards/new", {
       method: "POST",
       body: JSON.stringify({ ...newBoard }),
       headers: {
@@ -30,7 +30,7 @@ const Dashboard = () => {
   };
   const handleDelete = (id) => {
     setLoading(true);
-    fetch(`http://localhost:3000/api/boards/${id}`, {
+    fetch(`https://task-m-api.vercel.app/api/boards/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +55,7 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/boards/all", {
+    fetch("https://task-m-api.vercel.app/api/boards/all", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
